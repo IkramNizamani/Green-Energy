@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+  height: 90px;
+  width: 100%;
+  padding-top: 20px;
+  position: fixed;
+  z-index: 2;
+}
+nav img {
+  padding: 0 100px 10px;
+}
+nav ul {
+  float: right;
+  margin-right: 50px;
+  padding-top: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 40px;
+  border-right: solid 1px #9a9;
+}
+
+nav ul li:last-child {
+  border-right: none;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+nav ul li a:hover {
+  color: #90ee90;
+  transition: 0.5s;
+}
+
+.menu {
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  right: 60px;
+}
+.menu a {
+  text-decoration: none;
+  font-size: 10px;
+  margin-left: 15px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.menu a:hover {
+  color: #90ee90;
+}
+
+.scrolled {
+  transition: 0.2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 60px;
+  display: none;
+  cursor: pointer;
+}
+
+#check {
+  display: none;
+}
+
+.landing {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85vh;
+}
+.landing img {
+  height: 95vh;
+  width: 100%;
+}
+
+.heading-text {
+  position: absolute;
+  top: 180px;
+  left: 150px;
+}
+.heading-title {
+  color: #90ee90;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.heading-title span {
+  color: #fff;
+}
+
+.heading-desc {
+  position: absolute;
+  top: 370px;
+  left: 120px;
+}
+.heading-desc p {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  width: 70%;
+}
+
+.heading-text p {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.container {
+  margin-top: 130px;
+  text-align: center;
+}
+
+#content {
+  margin-bottom: 80px;
+}
+.content {
+  width: 60%;
+  margin: 0 auto 50px;
+}
+.content-inner {
+  width: 35%;
+  margin: 0 auto 0;
+  border: solid 1px #009000;
+  border-radius: 20%;
+  transition: 0.5s;
+}
+.content-inner:hover {
+  background-color: #009000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#crying {
+  width: 80%;
+  margin: 800px auto 200px auto;
+}
+#crying div .crying-text {
+  text-align: center;
+  float: left;
+  width: 50%;
+}
+#crying div .crying-emoji {
+  text-align: center;
+  float: right;
+  width: 50%;
+  font-size: 32px;
+}
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+  nav img {
+    padding-bottom: 5px;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #18191a;
+    /* top: 80; */
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 2;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
